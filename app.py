@@ -1,7 +1,6 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.responses import JSONResponse
 from pipeline import ONNXPipeline
-import jsonify
 import io
 from PIL import Image
 
