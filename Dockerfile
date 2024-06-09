@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM python:3.9-sl
 
 WORKDIR /app
 
@@ -10,6 +10,6 @@ COPY . .
 
 RUN uvicorn app:app --
 
-EXPOSE 8080
+EXPOSE 8000
 
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
