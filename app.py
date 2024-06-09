@@ -18,7 +18,7 @@ async def get_prediction(file: UploadFile = File(...)):
     try:
         image = Image.open(io.BytesIO(await file.read()))
         result = onnx_pipeline.predict(image)
-        return  JSONResponse(content=result)
+        return  JSONResponse(content={"prediction":result})
     
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
